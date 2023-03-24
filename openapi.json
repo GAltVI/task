@@ -12,17 +12,29 @@
         ],
         "operationId": "getOrders",
         "parameters": [
-          {
-            "name": "page_token",
-            "in": "query",
-            "description": "Page identifier token",
-            "required": true,
-            "schema": {
-              "type": "string"
+            {
+              "name": "limit",
+              "in": "query",
+              "description": "Максимальное количество заказов в выдаче. Если параметр не передан, то значение по умолчанию равно 1.",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "example": 10
             },
-            "example": "3caadb53268567e2"
-          }
-        ],
+            {
+              "name": "offset",
+              "in": "query",
+              "description": "Количество заказов, которое нужно пропустить для отображения текущей страницы. Если параметр не передан, то значение по умолчанию равно 0.",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "example": 0
+            }
+          ],
         "responses": {
           "200": {
             "description": "ok",
@@ -243,16 +255,28 @@
         ],
         "operationId": "getCouriers",
         "parameters": [
-          {
-            "name": "page_token",
-            "in": "query",
-            "description": "Page identifier token",
-            "required": true,
-            "schema": {
-              "type": "string"
+            {
+              "name": "limit",
+              "in": "query",
+              "description": "Максимальное количество курьеров в выдаче. Если параметр не передан, то значение по умолчанию равно 1.",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "example": 10
             },
-            "example": "3caadb53268567e2"
-          }
+            {
+              "name": "offset",
+              "in": "query",
+              "description": "Количество курьеров, которое нужно пропустить для отображения текущей страницы. Если параметр не передан, то значение по умолчанию равно 0.",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "example": 0
+            }
         ],
         "responses": {
           "200": {
