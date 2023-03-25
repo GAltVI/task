@@ -286,7 +286,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/OrderDto"
+                    "$ref": "#/components/schemas/GetCouriersResponse"
                   }
                 }
               }
@@ -327,7 +327,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/OrderDto"
+                    "$ref": "#/components/schemas/CreateCouriersResponse"
                   }
                 }
               }
@@ -427,7 +427,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/OrderDto"
+                    "$ref": "#/components/schemas/CourierDto"
                   }
                 }
               }
@@ -735,8 +735,82 @@
           }
         }
       },
+      "CourierDto": {
+        "required": [
+            "courier_id",
+            "courier_type",
+            "regions",
+            "working_hours"
+        ],
+        "type": "object",
+        "properties": {
+            "courier_id": {
+                "type": "integer",
+                "format": "int64"
+            },
+            "courier_type": {
+                "type": "string",
+                "enum": [
+                    "FOOT",
+                    "BIKE",
+                    "AUTO"
+                ]
+            },
+            "regions": {
+                "type": "array",
+                "items": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "working_hours": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            }
+        }
+      },
+      "CreateCouriersResponse": {
+        "required": [
+            "couriers"
+        ],
+        "type": "object",
+        "properties": {
+            "couriers": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/CourierDto"
+                }
+            }
+        }
+      },
       "NotFoundResponse": {
         "type": "object"
+      },
+      "GetCouriersResponse": {
+        "required": [
+            "couriers",
+            "limit",
+            "offset"
+        ],
+        "type": "object",
+        "properties": {
+            "couriers": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/CourierDto"
+                }
+            },
+            "limit": {
+                "type": "integer",
+                "format": "int32"
+            },
+            "offset": {
+                "type": "integer",
+                "format": "int32"
+            }
+        }
       },
       "GetCourierMetaInfoResponse": {
         "required": [
