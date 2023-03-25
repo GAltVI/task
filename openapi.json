@@ -16,7 +16,7 @@
               "name": "limit",
               "in": "query",
               "description": "Максимальное количество заказов в выдаче. Если параметр не передан, то значение по умолчанию равно 1.",
-              "required": true,
+              "required": false,
               "schema": {
                 "type": "integer",
                 "format": "int32"
@@ -27,7 +27,7 @@
               "name": "offset",
               "in": "query",
               "description": "Количество заказов, которое нужно пропустить для отображения текущей страницы. Если параметр не передан, то значение по умолчанию равно 0.",
-              "required": true,
+              "required": false,
               "schema": {
                 "type": "integer",
                 "format": "int32"
@@ -259,7 +259,7 @@
               "name": "limit",
               "in": "query",
               "description": "Максимальное количество курьеров в выдаче. Если параметр не передан, то значение по умолчанию равно 1.",
-              "required": true,
+              "required": false,
               "schema": {
                 "type": "integer",
                 "format": "int32"
@@ -270,7 +270,7 @@
               "name": "offset",
               "in": "query",
               "description": "Количество курьеров, которое нужно пропустить для отображения текущей страницы. Если параметр не передан, то значение по умолчанию равно 0.",
-              "required": true,
+              "required": false,
               "schema": {
                 "type": "integer",
                 "format": "int32"
