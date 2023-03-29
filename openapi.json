@@ -319,10 +319,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CreateCouriersResponse"
-                  }
+                  "$ref": "#/components/schemas/CreateCouriersResponse"
                 }
               }
             }
