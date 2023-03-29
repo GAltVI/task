@@ -364,10 +364,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/OrderDto"
-                  }
+                  "$ref": "#/components/schemas/OrderDto"
                 }
               }
             }
