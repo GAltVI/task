@@ -227,7 +227,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
+                  "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/OrderAssignResponse"
                   }
@@ -284,10 +284,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "items": {
-                    "$ref": "#/components/schemas/GetCouriersResponse"
-                  }
+                  "$ref": "#/components/schemas/GetCouriersResponse"
                 }
               }
             }
@@ -425,10 +422,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "items": {
-                    "$ref": "#/components/schemas/CourierDto"
-                  }
+                  "$ref": "#/components/schemas/CourierDto"
                 }
               }
             }
